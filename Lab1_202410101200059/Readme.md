@@ -85,7 +85,7 @@ Starting from a source vertex:
 ## 📂 Project Structure
 
 ```
-Lab1_YourRollNumber/
+Lab1_202410101200059/
 │
 ├── Graph.java
 ├── BFSTest.java
@@ -168,6 +168,6 @@ g.bfs(0);
 
 ## 👨‍💻 Author
 
-Name: ISHANT  
+Name: ISHANT BHOYAR
 Course: Advanced Object-Oriented Programming  
 Lab: BFS using Queues
