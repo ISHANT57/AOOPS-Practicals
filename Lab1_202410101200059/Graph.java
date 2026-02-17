@@ -18,4 +18,12 @@ public int getVerticesCount(){
     return vertices_count;
 }
 
+public void addEdge(int source, int destination){
+    if(source < 0 || source >= vertices_count || destination < 0 || destination >= vertices_count)
+        throw new IllegalArgumentException("Source and destination must be between 0 and " + (vertices_count - 1));
+    adjacency_list.get(source).add(destination);
+    adjacency_list.get(destination).add(source);
+
+}
+
 }

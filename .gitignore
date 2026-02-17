@@ -1,0 +1,12 @@
+# Ignore IntelliJ files
+.idea/
+
+# Ignore IMl files
+*.iml
+
+# Ignore build folders
+out/
+target/
+
+# OS generated files
+.DS_Store
