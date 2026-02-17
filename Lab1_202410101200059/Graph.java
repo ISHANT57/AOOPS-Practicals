@@ -17,6 +17,8 @@ public class Graph {
         for(int i=0; i<vertices_count; i++){
             connections.add(new ArrayList<>());
         }
+
+        // System.out.println("Graph created succesfully with" + vertices_count + "vertices");
     }
 
     public int getVerticesCount(){
@@ -35,6 +37,38 @@ public class Graph {
             connections.get(destination).add(source);
         }
 
+        // System.out.println("Undirected Graph");
+
     }
+
+    public int getNumVertices() {
+        return vertices_count;
+    }
+    
+    public void bfs(int start) {
+        if(start < 0 || start >= vertices_count)
+            throw new IllegalArgumentException("Start vertex must be between 0 and " + (vertices_count - 1));
+        
+        boolean[] visited_array = new boolean[vertices_count];
+        Queue<Integer> queue = new LinkedList<>();
+
+        visited_array[start] = true;
+        queue.add(start);
+
+        while(!queue.isEmpty()){
+
+            int curr = queue.poll();
+            System.out.print(curr + " ");
+
+            for(int neigh : connections.get(curr)){
+                if(!visited_array[neigh]){
+                    visited_array[neigh]=true;
+                    queue.add(neigh);
+                }
+            }
+        }
+    }
+
+    //System.out.println("BFS traversal");
 
 }
