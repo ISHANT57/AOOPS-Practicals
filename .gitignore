@@ -12,7 +12,7 @@ target/
 .DS_Store
 
 # Ignore java compiled files
-*.class
+Lab1_202410101200059/*.class
 
 #ignore log files
 *.log
