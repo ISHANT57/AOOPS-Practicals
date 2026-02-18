@@ -10,3 +10,9 @@ target/
 
 # OS generated files
 .DS_Store
+
+# Ignore java compiled files
+*.class
+
+#ignore log files
+*.log
